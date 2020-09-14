@@ -19,6 +19,8 @@ var shiftPuzzle6 = false;
 var shiftPuzzle7 = false;
 
 
+
+
 function preload(){
   puzzle1Img = loadImage("stories/sleepingBeauty/SBscene1.jpg")
   puzzle2Img = loadImage("stories/sleepingBeauty/SBscene2.jpg")
@@ -133,7 +135,7 @@ else if(!movedPuzzle7 && mouseX>=475 && mouseX<=525 && mouseY>=325 && mouseY<=37
   shiftPuzzle7 = true
   movedPuzzle7 = true
             } 
-
+          }
 function mouseReleased(){
 console.log("mouseReleased")
 shiftPuzzle1 = false
@@ -169,6 +171,16 @@ if(puzzle4.x<=650 || puzzle4.x>=1050 || puzzle4.y<=100 || puzzle4.y>=400){
         movedPuzzle5 = false
           }
          
+          if(puzzle6.x<=650 || puzzle6.x>=1050 || puzzle6.y<=100 || puzzle6.y>=400){
+            puzzle6.x = 325
+            puzzle6.y = 350
+            movedPuzzle6 = false
+              }
+              if(puzzle7.x<=650 || puzzle7.x>=1050 || puzzle7.y<=100 || puzzle7.y>=400){
+                puzzle7.x = 500
+                puzzle7.y = 350
+                movedPuzzle7 = false
+                  }
 //console.log(puzzle2.x)
 //console.log(puzzle2.y)
-}}
+}
